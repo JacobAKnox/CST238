@@ -6,10 +6,10 @@ import java.awt.event.ActionListener;
 import editor.EditorTextArea;
 
 public class StyleListener implements ActionListener {
-	
+
 	protected int style;
 	protected EditorTextArea area;
-	
+
 	public StyleListener(int style, EditorTextArea area) {
 		this.style = style;
 		this.area = area;
@@ -17,6 +17,7 @@ public class StyleListener implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		// set the passed style in the passed text area
 		area.setStyle(style);
 	}
 

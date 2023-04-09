@@ -9,14 +9,15 @@ public class FontListener implements ActionListener {
 
 	protected String font;
 	protected EditorTextArea area;
-	
+
 	public FontListener(String font, EditorTextArea area) {
 		this.font = font;
 		this.area = area;
 	}
-	
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		// set the passed font family in the passed text area
 		area.setFontFamily(font);
 	}
 
