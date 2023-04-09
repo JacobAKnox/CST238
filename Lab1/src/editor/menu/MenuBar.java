@@ -16,8 +16,22 @@ public class MenuBar extends JMenuBar {
 	public MenuBar(EditorTextArea area) {
 		JMenu menu = new JMenu("File");
 		JMenuItem item;
-		menu.add(new JMenuItem("Save"));
-		menu.add(new JMenuItem("Load"));
+    item = new JMenuItem("Save");
+    item.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        area.save();
+      }
+    });
+		menu.add(item);
+    item = new JMenuItem("Load");
+    item.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        area.load();
+      }
+    });
+		menu.add(item);
 		item = new JMenuItem("Exit");
 		item.addActionListener(new ActionListener() {
 			@Override
