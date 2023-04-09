@@ -14,13 +14,13 @@ public class Editor {
 		frame.setSize(600, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		JTextArea textArea = new JTextArea();
+		EditorTextArea textArea = new EditorTextArea();
 		JScrollPane scrollPane = new JScrollPane(textArea);
 		textArea.setEditable(true);
 		
 		frame.add(scrollPane);
 		
-		frame.add(BorderLayout.NORTH, new MenuBar());
+		frame.add(BorderLayout.NORTH, new MenuBar(textArea));
 		
 		frame.setVisible(true);
 	}
