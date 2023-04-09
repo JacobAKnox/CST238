@@ -1,6 +1,8 @@
 package editor.menu;
 
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
@@ -16,7 +18,14 @@ public class MenuBar extends JMenuBar {
 		JMenuItem item;
 		menu.add(new JMenuItem("Save"));
 		menu.add(new JMenuItem("Load"));
-		menu.add(new JMenuItem("Exit"));
+		item = new JMenuItem("Exit");
+		item.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		menu.add(item);
 		add(menu);
 
 		menu = new JMenu("Font");
