@@ -10,6 +10,8 @@ import editor.EditorTextArea;
 import editor.listeners.FontListener;
 import editor.listeners.StyleListener;
 
+//Jacob Knox CST238 Lab 1
+
 public class MenuBar extends JMenuBar {
 	private static final long serialVersionUID = 1L;
 

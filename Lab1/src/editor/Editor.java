@@ -6,6 +6,8 @@ import javax.swing.*;
 
 import editor.menu.MenuBar;
 
+//Jacob Knox CST238 Lab 1
+
 public class Editor {
 
 	public static void main(String[] args) {

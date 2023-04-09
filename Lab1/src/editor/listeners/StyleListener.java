@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 
 import editor.EditorTextArea;
 
+//Jacob Knox CST238 Lab 1
+
 public class StyleListener implements ActionListener {
 
 	protected int style;

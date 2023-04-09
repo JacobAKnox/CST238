@@ -8,6 +8,8 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
+//Jacob Knox CST238 Lab 1
+
 public class EditorTextArea extends JTextArea {
 
 	private static final long serialVersionUID = 1L;

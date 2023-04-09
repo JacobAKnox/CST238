@@ -1,0 +1,28 @@
+Jacob Knox CST238 Lab 1
+
+1. make sure all menu items are there and in the right place
+  File, save, load, exit
+  Font, Mono, Sans Serif, Serif
+  Style, Plain, Italics, Bold
+2. make sure there is a text area
+3. make sure you can type in the text area
+
+check all the buttons:
+1. Exit closes the window
+2. save pulls up a file selctor
+3. save save the contents of the text area to the file
+  make sure things like newlines are preserved
+  make sure it is valid in other text editors
+  make sure you can only save to files and not directories
+4. load pulls up a file selector
+  make sure you can only select files and not directories
+  make sure the contents of the file are loaded into the text area
+  create in another editor and make sure it loads correctly
+5. each button changes the font of the text area
+  make sure the font is changed
+  make sure that each font can be changed to each style
+  make sure each font can be changed to each other font
+6. each button changes the style of the text area
+  make sure the style is changed
+  make sure that each style can be changed to each font
+  make sure each style can be changed to each other style
