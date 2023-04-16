@@ -1,5 +1,7 @@
 package calculator.ui;
 
+import calculator.Calculator;
+
 import java.awt.*;
 
 public class Layout extends javax.swing.JPanel {
@@ -11,34 +13,40 @@ public class Layout extends javax.swing.JPanel {
 
     protected FunctionButton[] functionButtons;
 
+    protected Calculator calculator;
+
+    // array of x and y coordinates for the buttons
     static int[] x = {0, 1, 2, 0, 1, 2, 0, 1, 2};
     static int[] y = {2, 2, 2, 1, 1, 1, 0, 0, 0};
     public Layout() {
-        Dimension maxScreenSize = new Dimension(1000, 1000);
         this.screen = new CalculatorScreen(20);
 
-        this.numberButtons = new NumberButton[10]; // 0-9
+        this.calculator = new Calculator(screen);
+
+        this.numberButtons = new NumberButton[10]; // 1-9
         for (int i = 0; i < 10; i++) {
             numberButtons[i] = new NumberButton(i, screen);
         }
 
-        this.zeroButton = new NumberButton(0, screen);
+        this.zeroButton = numberButtons[0]; // zero needs to be handled differently
         this.decimalButton = new NumberButton('.', screen);
 
-        this.functionButtons = new FunctionButton[7];
-        functionButtons[0] = new FunctionButton('C', screen);
-        functionButtons[1] = new FunctionButton('±', screen);
-        functionButtons[2] = new FunctionButton('/', screen);
-        functionButtons[3] = new FunctionButton('*', screen);
-        functionButtons[4] = new FunctionButton('-', screen);
-        functionButtons[5] = new FunctionButton('+', screen);
-        functionButtons[6] = new FunctionButton('=', screen);
+        this.functionButtons = new FunctionButton[7]; // function buttons are in order along the top then down the right
+        functionButtons[0] = new FunctionButton('C', calculator);
+        functionButtons[1] = new FunctionButton('±', calculator);
+        functionButtons[2] = new FunctionButton('/', calculator);
+        functionButtons[3] = new FunctionButton('*', calculator);
+        functionButtons[4] = new FunctionButton('-', calculator);
+        functionButtons[5] = new FunctionButton('+', calculator);
+        functionButtons[6] = new FunctionButton('=', calculator);
 
+        // set the layout
         GridBagLayout layout = new GridBagLayout();
         setLayout(layout);
 
         GridBagConstraints constraints = new GridBagConstraints();
 
+        // screen is at the top across the whole width, does not expand or shrink vertically
         constraints.gridx = 0;
         constraints.gridy = 0;
         constraints.gridwidth = 4;
@@ -52,7 +60,7 @@ public class Layout extends javax.swing.JPanel {
         constraints.gridy = 1;
         constraints.fill = GridBagConstraints.BOTH;
 
-        // top row function buttons
+        // top row function buttons, C, ±, /, *
         for (int i = 0; i <= 3; i++) {
             constraints.gridx = i;
             add(functionButtons[i], constraints);
@@ -66,6 +74,7 @@ public class Layout extends javax.swing.JPanel {
         constraints.gridy = 3;
         add(functionButtons[5], constraints);
 
+        // equals button
         constraints.gridy = 4;
         constraints.gridheight = 2;
         add(functionButtons[6], constraints);

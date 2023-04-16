@@ -19,16 +19,20 @@ public class CalculatorScreen extends JTextField {
     public void addDigit(String digit) {
         String text;
 
-        if (resetOnPress)
+        // if the screen is reset, clear the screen to 0
+        if (resetOnPress) {
             text = "0";
-        else
+            decimal = false; // reset decimal flag
+        } else {
             text = getText();
+        }
 
-        if (digit.equals(".") && decimal)
+        if (digit.equals(".") && decimal) // can only have one decimal
             return;
         else if (digit.equals("."))
             decimal = true;
 
+        // remove leading 0 if digit is not a decimal
         if (text.equals("0") && !digit.equals("."))
             text = "";
 
