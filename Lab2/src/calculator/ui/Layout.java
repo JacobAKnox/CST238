@@ -4,6 +4,8 @@ import calculator.Calculator;
 
 import java.awt.*;
 
+// Jacob Knox CST238 Lab2 4/16/2023
+
 public class Layout extends javax.swing.JPanel {
 
     protected CalculatorScreen screen;

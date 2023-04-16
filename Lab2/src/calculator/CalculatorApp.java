@@ -4,6 +4,9 @@ import calculator.ui.Layout;
 
 import javax.swing.*;
 
+
+// Jacob Knox CST238 Lab2 4/16/2023
+
 public class CalculatorApp {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Calculator");

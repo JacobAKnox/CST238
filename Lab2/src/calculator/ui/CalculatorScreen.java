@@ -3,6 +3,8 @@ package calculator.ui;
 import javax.swing.JTextField;
 import java.awt.*;
 
+// Jacob Knox CST238 Lab2 4/16/2023
+
 public class CalculatorScreen extends JTextField {
 
     protected boolean resetOnPress = false;

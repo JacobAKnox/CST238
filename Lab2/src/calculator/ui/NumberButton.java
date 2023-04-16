@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// Jacob Knox CST238 Lab2 4/16/2023
+
 public class NumberButton extends JButton {
 
     protected String value;

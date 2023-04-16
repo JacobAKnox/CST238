@@ -5,6 +5,8 @@ import calculator.ui.CalculatorScreen;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+// Jacob Knox CST238 Lab2 4/16/2023
+
 // class that handles the functionality of the calculator
 public class Calculator {
 
