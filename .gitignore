@@ -7,4 +7,6 @@ Lab1/bin/*
 */out/*
 */.idea/*
 */.gradle/*
-*
+*.iml
+*.classpath
+test/*
