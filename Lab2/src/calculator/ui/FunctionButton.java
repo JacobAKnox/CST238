@@ -10,7 +10,8 @@ import java.awt.event.ActionListener;
 
 public class FunctionButton extends JButton {
 
-    protected Calculator calculator;
+    private static final long serialVersionUID = 1L;
+	protected Calculator calculator;
     protected String value;
 
     public FunctionButton(char label, Calculator calculator) {

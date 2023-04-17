@@ -8,7 +8,8 @@ import java.awt.*;
 
 public class Layout extends javax.swing.JPanel {
 
-    protected CalculatorScreen screen;
+    private static final long serialVersionUID = 1L;
+	protected CalculatorScreen screen;
     protected NumberButton[] numberButtons;
     protected NumberButton zeroButton;
     protected NumberButton decimalButton;

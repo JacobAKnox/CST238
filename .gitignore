@@ -10,3 +10,4 @@ Lab1/bin/*
 *.iml
 *.classpath
 test/*
+*.jar

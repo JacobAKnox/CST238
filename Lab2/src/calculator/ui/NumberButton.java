@@ -8,7 +8,8 @@ import java.awt.event.ActionListener;
 
 public class NumberButton extends JButton {
 
-    protected String value;
+    private static final long serialVersionUID = 1L;
+	protected String value;
     protected CalculatorScreen screen;
     public NumberButton(int label, CalculatorScreen screen) {
         super(Integer.toString(label));

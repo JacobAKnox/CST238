@@ -7,7 +7,8 @@ import java.awt.*;
 
 public class CalculatorScreen extends JTextField {
 
-    protected boolean resetOnPress = false;
+    private static final long serialVersionUID = 1L;
+	protected boolean resetOnPress = false;
     protected boolean decimal = false;
 
     public CalculatorScreen(int width) {
