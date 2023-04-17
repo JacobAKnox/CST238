@@ -1,0 +1,16 @@
+layout is correct
+
+Screen starts with 0
+numbers add the appropriate number to the screen
+no leading zeros except for decimals points (0.5)
+no more than 1 decimal point
+Clear button resets the screen to 0 and clears the operations and stored values
+
+operators all do correct calculations (1+1 = 2 etc)
+current running result is displayed on screen after hitting an operator but before entering another number
+= button shows the running result, buts does not clear running result
+plus minus button changes the sign of the number on screen, can be pressed any number of times in a row
+hitting operators more than once in a row does nothing
+hitting = more than once in a row does nothing
+typing after hitting = clears the screen and starts a new calculation
+hitting an operator after hitting = contiues the calculation with the result of the previous calculation

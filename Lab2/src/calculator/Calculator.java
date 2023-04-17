@@ -51,6 +51,11 @@ public class Calculator {
             operator = tempOperator;
         }
 
+        // do nothing if you hit operators in a row
+        if (screen.getReset()) {
+            return;
+        }
+
         // perform the operation
         double currentValue = screen.getValue();
         double result = 0;
@@ -62,7 +67,7 @@ public class Calculator {
             case "/" -> result = storedValue / currentValue;
             case "C" -> storedOperator = ""; // clear the stored operator, result will be 0, screen will be reset
             case "±" -> {screen.setValue(-currentValue); return;} // negate the current value and return
-            case "=" -> {performOperation(storedOperator); return;} // perform the stored operation and return
+            case "=" -> {performOperation(storedOperator); storedOperator=""; return;} // perform the stored operation and return
         }
 
         screen.setValue(result); // set the screen to the result

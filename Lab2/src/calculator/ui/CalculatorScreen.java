@@ -58,4 +58,8 @@ public class CalculatorScreen extends JTextField {
     public void setReset() {
         resetOnPress = true;
     }
+
+    public boolean getReset() {
+        return resetOnPress;
+    }
 }
