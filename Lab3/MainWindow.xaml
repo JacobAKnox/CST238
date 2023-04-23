@@ -1,0 +1,51 @@
+﻿<Window x:Class="JacobKLab3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JacobKLab3"
+        mc:Ignorable="d"
+        Title="Jacob Knox Lab 3" Height="450" Width="800">
+    <StackPanel Style="{DynamicResource backround}">
+        <Label Style="{DynamicResource title}">
+            WPF 4.5 Unleashed
+        </Label>
+        <Label Style="{DynamicResource text}">© 2013 SAMS Publishing</Label>
+        <Label Style="{DynamicResource text}">Installed Chapters:</Label>
+        <ListBox Style="{DynamicResource listBox}">
+            <ListBoxItem Style="{DynamicResource text}">Chapter 1</ListBoxItem>
+            <ListBoxItem Style="{DynamicResource text}">Chapter 2</ListBoxItem>
+        </ListBox>
+        <StackPanel Style="{DynamicResource buttonStack}">
+            <Button Style="{DynamicResource button}" >
+                Help
+            </Button>
+            <Button Style="{DynamicResource button}">
+                OK
+            </Button>
+        </StackPanel>
+        <StatusBar Style="{DynamicResource status}">You have successfully registered this product.</StatusBar>
+        <Grid Style="{DynamicResource grid}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button x:Name="style1" Style="{DynamicResource button}" Grid.Row="0" Grid.Column="0" Click="OnStyleButtonClick">
+            Dark Mode
+            </Button>
+            <Button x:Name="style2" Style="{DynamicResource button}" Grid.Row="0" Grid.Column="1" Click="OnStyleButtonClick">
+            Bold Mode
+            </Button>
+            <Button x:Name="style3" Style="{DynamicResource button}" Grid.Row="1" Grid.Column="0" Click="OnStyleButtonClick">
+            Big Mode
+            </Button>
+            <Button x:Name="style4" Style="{DynamicResource button}" Grid.Row="1" Grid.Column="1" Click="OnStyleButtonClick">
+            Rainbow
+            </Button>
+        </Grid>
+    </StackPanel>
+</Window>
