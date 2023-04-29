@@ -1,0 +1,7 @@
+Create a simple gui app using any language/framework covered in class
+
+The gui must have at least 2 screens
+The screens should be accessed with tabs
+
+Each screen should have a few elements on it (buttons, checkboxes, text boxes, etc.)
+Nothing needs functionality except for moving between screens
